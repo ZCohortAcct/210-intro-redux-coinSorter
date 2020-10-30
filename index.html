@@ -1,0 +1,43 @@
+<head>
+  <meta charset='utf-8'>
+  <title>Redux Coin Counter</title>
+
+</head>
+
+<body>
+  <h1>Coint Sorter</h1>
+
+  <form id='add-coin-form'>
+    <input id='add-coin-input' type='text' placeholder="Add coin name" />
+    <input type="submit" value='Add Coin'/>
+  </form>
+  
+
+  <div id='coin-count'>
+    <h2>Pennies: </h2>
+    Count: <span id='penny-count'>0</span>
+    Value: <span id='penny-value'>0</span>
+
+    <h2>Nickels: </h2>
+    Count: <span id='nickel-count'>0</span>
+    Value: <span id='nickel-value'>0</span>
+
+    <h2>Dimes: </h2>
+    Count: <span id='dime-count'>0</span>
+    Value: <span id='dime-value'>0</span>
+
+    <h2>Quarters: </h2>
+    Count: <span id='quarter-count'>0</span>
+    Value: <span id='quarter-value'>0</span>
+
+    <h2>Total: </h2>
+    Value: <span id='total-value'>0</span><br/>
+    <button id='get-total-count'>Click for Total Coin Count</button>
+    <span hidden id='hidden-span'>Count: <span id='total-count'>0</span> </span>
+
+  </div>
+</body>
+
+<script src="index.js"></script>
+
+

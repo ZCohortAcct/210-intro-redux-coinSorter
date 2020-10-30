@@ -1,0 +1,70 @@
+
+// VERBIAGE SWAP & CORE OF redux
+function createStore(reducer) {
+    let state = reducer();
+    
+    return {
+        dispatch: function(instructs) { state = reducer(state, instructs) },
+        getState: function() { console.log(state) }
+    }
+}
+
+~~~
+// set counter val 2 intial reducer val
+function makeCounter(reducer) {
+    let counter = reducer();
+    return {
+        dispatch: function(instructs){counter = reducer(counter, instructs)},
+        getCounter: function(){ console.log(counter)}
+    }
+}
+
+// reducer
+const counterReducer = (counter = 0, instructs) => {
+    switch(instructs) {
+        case 'increment':
+            return counter + 1
+        case 'decrement':
+            return counter - 1
+       default:
+            return counter
+    }
+
+}
+
+
+// need to set counter val 2 intial reducer val
+function makeCounter(reducer) {
+    let counter;
+
+    return {
+            dispatch: function(instructions) { counter = reducer(counter,instructions) },
+            getCounter: function(){ console.log(counter)}
+    }
+}
+
+
+~~~
+
+// inital redux 'store fn'
+ƒ makeCounter() {
+    let counter = 0
+
+    return {
+    increment: function() { counter += 1 },
+    getState: function(){ console.log(counter)},
+    decrement: function() { counter -= 1 }
+    }
+}
+
+
+~~~~
+// basic redux functionality 
+ƒ increment() {
+    let counter = 0
+    
+return function(){
+    counter += 1
+    console.log(counter)
+    }
+}
